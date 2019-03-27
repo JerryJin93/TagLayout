@@ -41,10 +41,8 @@ allprojects {
 接着在你的需要依赖的Module的`build.gradle`加入依赖:
 
 ```gradle
-compile 'com.github.Rukey7:TagLayout:{lastest-version}'
+compile 'com.github.Rukey7:TagLayout:1.0.7'
 ```
-
-其中 `{lastest-version}` 为最新的版本，你可以查看上面显示的jitpack版本信息，也可以到[jitpack.io](https://jitpack.io/#Rukey7/IjkPlayerView)仓库查看。
 
 ## Usage
 
