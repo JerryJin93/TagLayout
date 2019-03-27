@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mTagLayout = (TagLayout) findViewById(R.id.tag_layout);
         mTagLayout.setTags(mTagWords);
+        mTagLayout.addTagWithIcon("icon", R.mipmap.ic_launcher);
         mTagLayout.setTagClickListener(new TagView.OnTagClickListener() {
             @Override
             public void onTagClick(int position, String text, @TagView.TagMode int tagMode) {

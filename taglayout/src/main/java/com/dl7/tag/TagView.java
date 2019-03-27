@@ -369,16 +369,16 @@ public class TagView extends View {
             int padding = (mTagMode == MODE_ICON_CHECK_INVISIBLE && mIsChecked) ? 0 : mIconSize + mIconPadding;
             int fontLen = mIsChecked ? mFontLenChecked : mFontLen;
             canvas.drawText(mShowText,
-                    mIconGravity == Gravity.RIGHT ? (getWidth() - fontLen - padding) / 2
-                            : (getWidth() - fontLen - padding) / 2 + padding,
-                    getHeight() / 2 + mBaseLineDistance, mPaint);
+                    mIconGravity == Gravity.RIGHT ? (getWidth() - fontLen - padding) / 2f
+                            : (getWidth() - fontLen - padding) / 2f + padding,
+                    getHeight() / 2f + mBaseLineDistance, mPaint);
         } else {
             mPaint.setColor(mTextColor);
             int padding = mDecorateIcon == null ? 0 : mIconSize + mIconPadding;
             canvas.drawText(mShowText,
-                    mIconGravity == Gravity.RIGHT ? (getWidth() - mFontLen - padding) / 2
-                            : (getWidth() - mFontLen - padding) / 2 + padding,
-                    getHeight() / 2 + mBaseLineDistance, mPaint);
+                    mIconGravity == Gravity.RIGHT ? (getWidth() - mFontLen - padding) / 2f
+                            : (getWidth() - mFontLen - padding) / 2f + padding,
+                    getHeight() / 2f + mBaseLineDistance, mPaint);
         }
         // 绘制Icon
         if (mTagMode == MODE_ICON_CHECK_CHANGE && mIsChecked && mDecorateIconChange != null) {
@@ -386,7 +386,7 @@ public class TagView extends View {
         } else if (mTagMode == MODE_ICON_CHECK_INVISIBLE && mIsChecked) {
             // Don't need to draw
         } else if (mDecorateIcon != null) {
-            mDecorateIcon.setColorFilter(mPaint.getColor(), PorterDuff.Mode.SRC_IN);
+            // mDecorateIcon.setColorFilter(mPaint.getColor(), PorterDuff.Mode.SRC_IN);
             mDecorateIcon.draw(canvas);
         }
         // 绘制半透明遮罩
