@@ -41,7 +41,7 @@ allprojects {
 接着在你的需要依赖的Module的`build.gradle`加入依赖:
 
 ```gradle
-compile 'com.github.Rukey7:TagLayout:1.0.7'
+compile 'com.github.JerryJin:TagLayout:1.0.7'
 ```
 
 ## Usage
